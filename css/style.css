@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body{
+  background-color: lightgrey;
+}
+#skip {
+  opacity: 0;
+  text-decoration: none;
+
+}
+
+#skip:focus {
+  opacity: 1;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: .5em;
+
+}
+
+header{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  background-color: lightgray;
+  gap: 1em;
+  padding: 1em;
+   
+}
+.title{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.title .fa-rocket {
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: #1b4c6e;
+  color: lightblue;
+  padding: .5em;
+}
+ .title>a{
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: uppercase;
+
+ }
+
+
+nav {
+ display: flex;
+ justify-content: space-between;
+ gap: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight:600;
+
+}
+
+nav a:hover {
+  color: crimson;
+  transform: scale(1.1);
+}
+main {
+  background-image: url('../images/background-sm.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2em 1em;
+   display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+} */
+
+.column {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #1b4c6e;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1em;
+}
+
+/* .column img {
+  width: 60%;
+} */
+figure>img{
+  width: 60%;
+  aspect-ratio: 1 / 1.5;
+  object-fit: cover;
+}
+.column h2 {
+  color: lightgray;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.column h3 {
+
+  color: lightgray;
+  margin: 20px 0 20px 0;
+  
+}
+
+
+/* main h2:first-child {
+  color: lightgray;
+ 
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+
+} */
+
+.container-author {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-book {
+  background-color: #1b4c6e;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.container-book img {
+  width: 45%;
+}
+
+.container-book h3 {
+  color: lightblue;
+  
+  font-size: 1.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.container-book p {
+  color: lightgray;
+  font-size: 1.2rem;
+  margin: 1rem;
+
+}
+
+.container-book a {
+  color: red;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+}
+
+.container-book a:hover {
+  color: aquamarine;
+
+}
+
+section {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section img {
+  width: 20%;
+  border-radius: 50%;
+
+}
+
+#author-bio {
+  background-color: #1b4c6e;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: lightgray;
+  font: 2rem;
+  padding: 20px;
+}
+
+.more {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #1b4c6e;
+  font-size: 2rem;
+  color: lightgray;
+
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+footer p {
+  color: lightgray;
+  
+  font-weight: 700;
+  background-color: #1b4c6e;
+  text-align: center;
+  padding: 15px;
+}
+
+
+@media screen and (min-width:772px) {
+ 
+  main{
+    background-image: url('../images/background.jpg');
+  }
+
+/*   .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+
+  }
+ */
+  .column {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #1b4c6e;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+  }
+}
+
+@media screen and (min-width:992px) {
+
+  header {
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 1.5em;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    margin-top: 2rem;
+    /* align-items: stretch; */
+
+  }
+
+  .column {
+    grid-template-columns: 1fr;
+  }
+
+ 
+  footer p{
+    font-size: 1rem;
+  }
+}
