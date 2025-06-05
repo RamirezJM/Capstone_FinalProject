@@ -1,37 +1,39 @@
-<<<<<<< HEAD
 const info = document.querySelector("section")
-const showInfo = document.getElementsByClassName("more")
+const showInfo = document.querySelectorAll(".more")
 
 for (let i = 0; i < showInfo.length; i++) {
-  showInfo[i].addEventListener("click", () => {
-    if (info.style.display === "none") {
+  showInfo[i].addEventListener("click", (eve) => {
+    eve.preventDefault()
+
+    /* SOLUTION 1 , using toggle  */
+
+    info.classList.toggle('show-section')
+    if(info.classList.contains('show-section')){
+      showInfo[i].innerText = "Close"
+    }else{
+      showInfo[i].innerText = "More about the author"
+    }
+
+    /* SOLUTION 2 , using computedStyle  
+   
+   const computedStyle = window.getComputedStyle(info);
+
+    if (computedStyle.display === "none") {
       info.style.display = "block"
       showInfo[i].innerText = "Close"
     }
     else {
       info.style.display = "none"
       showInfo[i].innerText = "More about the author"
-    }
-  })
+    } */
+
+ })
+ 
+
+
+
+
+ 
 
 }
 
-=======
-const info = document.querySelector("section")
-const showInfo = document.getElementsByClassName("more")
-
-for (let i = 0; i < showInfo.length; i++) {
-  showInfo[i].addEventListener("click", () => {
-    if (info.style.display === "none") {
-      info.style.display = "block"
-      showInfo[i].innerText = "Close"
-    }
-    else {
-      info.style.display = "none"
-      showInfo[i].innerText = "More about the author"
-    }
-  })
-
-}
-
->>>>>>> 3557b25426c4b21cff85d28b4f082307af5394d6
